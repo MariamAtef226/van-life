@@ -1,8 +1,66 @@
-# React + Vite
+# Van Life 🚙
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of Content:
 
-Currently, two official plugins are available:
+- [Project Description](#project-description-page_facing_up)
+- [Demo](#demo)
+- [Technologies](#technologies)
+- [Pre-requisites](#pre-requisites-grey_question)
+- [Setup](#setup)
+- [License](#license)
+- [Author](#author)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Description :page_facing_up:
+
+...
+
+## Demo
+
+[visit website](https://mariamatef226.github.io/van-life/)
+
+
+## Technologies 💻
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="react" width="30" height="30"> __React.js__
+
+
+## Pre-requisites :grey_question:
+
+- Node.js (version 14 or higher)
+- npm (version 6 or higher)
+- React 18 is used
+
+## Setup ⬇️
+
+1. Clone the repository or download the source code.
+
+2. Navigate to the project directory using your terminal.
+
+```
+cd random-quotes-app
+```
+
+3. Install the required dependencies.
+
+```
+npm install
+```
+
+4. Start the development server.
+
+```
+npm start
+```
+
+5. Open your web browser and navigate to http://localhost:3000 to see the app in action.
+
+
+## License ⚖️
+
+This project is licensed under the MIT License.
+
+## Author 🖊️
+
+**Mariam Atef Hassan  - August 2023**
+
+
