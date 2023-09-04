@@ -11,6 +11,7 @@ import Home from './pages/Home';
 import Vans from './pages/Vans';
 import VansDetails from './pages/VanDetails';
 import Error from './components/Error'
+import NotFound from './components/NotFound';
 
 import { loader as vansLoader } from './pages/Vans'
 import { loader as vanDetailsLoader} from './pages/VanDetails'
@@ -20,6 +21,7 @@ let router = createBrowserRouter(createRoutesFromElements(
     <Route index element={<Home />} />
     <Route path='vans' element={<Vans />} loader={vansLoader} />
     <Route path='vans/:id'  element={<VansDetails/>} loader={vanDetailsLoader} errorElement={<Error/>} />
+    <Route path='*' element={<NotFound />}/>
   </Route>
 ))
 
