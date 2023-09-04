@@ -1,0 +1,256 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --dGrey:#252525;
+  --lGrey:#898989;
+  --beige:#FFF7ED;
+}
+
+body, #root{
+  padding:0;
+  margin:0;
+  background-color: var(--beige);
+  min-height:100vh;
+}
+
+/* footer styling */
+
+.footer{
+
+  background-color: var(--dGrey);
+  color:var(--lGrey);
+  text-align: center;
+  padding:20px 0;
+  font-weight: 500;
+  font-size: 1.2rem;
+  width:100%;
+}
+
+
+/* end of footer styling */
+
+/*navbar styling*/
+
+a{
+  text-decoration: none !important;
+} 
+
+.NavBar{
+  padding:20px;
+}
+
+
+.NavBar a.home{
+  font-weight:900;
+  font-size:1.7rem;
+  color:black;
+}
+
+.NavBar a.pages, .NavBar button, a.pages:active, a.pages:visited{
+  color:#504f4f;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+
+a.home:active,a.home:visited{
+  color:black;
+}
+
+a.pages:hover{
+  color: #161616;
+}
+
+/* end of navbar styling */
+
+/* home page styling*/
+
+.home-page{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url("./assets/home-hero.png") no-repeat center center;
+  height:calc(100vh - 150px);
+  padding:190px 40px 0;
+  color:white;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+}
+
+.home-page h1{
+  font-weight: 900;
+}
+
+.home-page button{
+  background-color: #ff8c38;
+  margin-top: 35px;
+  width:60%;
+  font-weight: bold;
+  transform: translateX(-50%);
+  left:50%;
+  position: absolute;
+  padding:20px;
+  color:white;
+}
+
+@media (min-width:765px){
+  .home-page, .error{
+    height:calc(100vh - 153px);
+  }
+}
+
+.home-page .text, .home-page button{
+  font-size: 1.2rem;
+}
+
+.home-page button:hover{
+  background-color: #fbaa70;
+  color:white;
+}
+
+/* end of home page styling */
+
+
+/* vans list page styling */
+
+.van-card .img-container img, .van-card{
+  width:300px;
+}
+
+.van-card--details, .van-detail .name, .van-detail .price{
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.img-container img{
+  border-radius: 10px;
+}
+
+.dayword{
+  font-size: 1rem;
+}
+
+.type{
+  color:white;
+  padding:10px 20px;
+  width: max-content;
+  border-radius: 5px;
+  text-transform: capitalize;
+  
+}
+
+.vans h1{
+  margin-top:20px;
+  font-weight: 700;
+}
+
+.van a{
+  text-decoration: none;
+  color:black;
+} 
+
+
+/* filter list in vans list page */
+.van-list-filter-buttons button{
+  height: 34px;
+  font-style: normal;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+}
+
+.van-type {
+  padding: 6px 20px;
+  background-color: #FFEAD0;
+  color: #4D4D4D;
+  transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clear-filters {
+  padding: 6px; 
+  color: #FFEAD0;
+  background-color: var(--lGrey);
+}
+
+.van-type:hover, .van-type.selected {
+  color: #FFEAD0;
+}
+
+.van-type:focus {
+  outline: none;
+}
+
+.van-type.simple:hover, .van-type.simple.selected {
+  background-color: #E17654;
+}
+
+.van-type.rugged:hover, .van-type.rugged.selected {
+  background-color: #115E59;
+}
+
+.van-type.luxury:hover, .van-type.luxury.selected {
+  background-color: #161616;
+}
+
+
+/* end of filter list in vans list page styling */
+
+/*end of van list page styling*/
+
+/* van details styling */
+
+/* van details page*/
+.van a{
+  text-decoration: none;
+  color:black;
+}
+
+.van-detail{
+  width:75%;
+}
+.van-detail .img-container{
+  text-align: center;
+}
+
+.van-detail .img-container img{
+  width:100%;
+  max-width: 600px;
+
+}
+
+.van-detail .price, .van-detail .name, .van-detail .desc{
+  margin-top:5px;
+}
+
+.van-detail .desc{
+  font-size: 1.05rem;
+}
+.van-detail button{
+  background-color: #ff8c38;
+  color:white;
+  border: none;
+  border-radius: 5px;
+  width:100%;
+  padding:10px;
+  margin-bottom:15px;
+}
+
+/* end of van details styling */
+
+
+/* error component styling */
+
+.error{
+  height:calc(100vh - 150px);
+}
+
+/* end of error component styling */
+
+/* not found - back to home page button */
+.notfound-backhome{
+  text-decoration: none;
+  font-size: 1.4rem;
+  color:white;
+  background-color: black;
+  padding:20px 10%;
+  border-radius: 5px;
+}
+/* end of back to home page styling */
