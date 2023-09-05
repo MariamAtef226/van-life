@@ -12,16 +12,17 @@
 
 ## Project Description :page_facing_up:
 
-...
+A simple website for viewing vans available for rental using react and react router. The project was part of Scrimba's 'Learn React Router 6' course. This version of the website is a new one that I've built from scratch on my own. The website includes user interface to check vans available for rent and host dashboard to control their hosted vans. The website is responsive on all devices.
 
 ## Demo
 
-[visit website](https://mariamatef226.github.io/van-life/)
-
+<img src='demo.gif' alt='demo' />
 
 ## Technologies 💻
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="react" width="30" height="30"> __React.js__
+<img src="https://firebase.google.com/static/downloads/brand-guidelines/PNG/logo-logomark.png" alt="react" width="30" height="30"> __Firebase__
+
 
 
 ## Pre-requisites :grey_question:
