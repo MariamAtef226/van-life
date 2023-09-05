@@ -22,6 +22,8 @@
 ## Technologies 💻
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="react" width="30" height="30"> __React.js__
+<img src="https://firebase.google.com/static/downloads/brand-guidelines/PNG/logo-logomark.png" alt="react" width="30" height="30"> __Firebase__
+
 
 
 ## Pre-requisites :grey_question:
