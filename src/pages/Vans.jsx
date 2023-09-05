@@ -79,7 +79,7 @@ export default function Vans() {
                 )}
             </div>
 
-            <div className=" row justify-content-center w-100">
+            <div className=" row justify-content-center w-100 van-row">
                 {
                     vans.map((v) => {
                         return <Van {...v} key={v.id} search={searchParams.toString()} />;

@@ -1,5 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
-import avatar from '../assets/avatar-icon.png'
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
 
@@ -8,17 +7,31 @@ export default function Navbar() {
         fontWeight: 'bold',
         textDecoration: "underline",
     };
+    let nav = useNavigate();
 
-    return (
-        <div className="NavBar d-flex justify-content-between align-items-center">
-            <Link to='/' className="home"><img width='40' className='d-none d-md-inline' src="https://cdn-icons-png.flaticon.com/512/1/1642.png" alt='van-icon' /> Van Life</Link>
+
+    return (<>
+        <div className="NavBar d-flex justify-content-between align-items-center ps-2 pe-2">
+            <Link to='/van-life' className="home"><img width='40' className='d-none d-md-inline' src="https://cdn-icons-png.flaticon.com/512/1/1642.png" alt='van-icon' /> Van Life</Link>
             <div className="d-flex">
-                <NavLink to='/' className='pages pe-3' style={({ isActive }) => (isActive ? activeStyling : null)}>Home</NavLink>
-                <NavLink to='/vans' className='pages pe-3' style={({ isActive }) => (isActive ? activeStyling : null)}>Vans</NavLink>
-                <NavLink to='/host' className='pages pe-3' style={({ isActive }) => (isActive ? activeStyling : null)}>Host</NavLink>
-                <Link to='/login'><img src={avatar} width='30' /> </Link>
+                <NavLink to='/van-life' end className='pages pe-1 pe-md-3' style={({ isActive }) => (isActive ? activeStyling : null)}>Home</NavLink>
+                <NavLink to='/van-life/vans' className='pages pe-1 pe-md-3' style={({ isActive }) => (isActive ? activeStyling : null)}>Vans</NavLink>
+                <NavLink to='/van-life/host' className='pages pe-1' style={({ isActive }) => (isActive ? activeStyling : null)}>Host</NavLink>
+                {localStorage.getItem('userId') &&
+                    <button
+                        className="logout ms-1 ms-md-2"
+                        onClick={() => {
+                            localStorage.removeItem("userId");
+                            nav("/van-life", { replace: true });
+                        }}>
+                        Log out
+                    </button>
+                }
             </div>
         </div>
+
+
+    </>
     )
 }
 

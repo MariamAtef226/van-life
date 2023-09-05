@@ -4,20 +4,21 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://mariamatef226.github.io/van-life",
-
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
     "bootstrap": "^5.3.1",
     "firebase": "^10.3.1",
+    "icons": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
     "react-router-dom": "^6.15.0"
   },
   "devDependencies": {

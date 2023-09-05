@@ -65,13 +65,32 @@ export async function getHostVans() {
 export async function getHostVansDetails(id) {
     const docRef = doc(db, "vans", id)
     const vanSnapshot = await getDoc(docRef)
-    if (vanSnapshot.data().hostId !=localStorage.getItem('userId')){
+    if (!vanSnapshot.exists() || vanSnapshot.data().hostId !=localStorage.getItem('userId')){
         throw{
             message: 'You don\'t have access to this page',
         }
     }
+
     return {
         ...vanSnapshot.data(),
         id: vanSnapshot.id
+    }
+}
+
+export async function loginUser(creds) {
+    const q = query(usersCollectionRef, where("email", "==", creds.email), where("password","==",creds.password))
+    const querySnapshot = await getDocs(q)
+    const data = querySnapshot.docs.map(doc => ({
+        ...doc.data(),
+        id: doc.id
+    }))
+    if (data.length !==0){
+        localStorage.setItem('userId',data[0].id)
+        return data[0]
+    }
+    else{
+        throw {
+            message: 'Invalid Credentials',
+        }
     }
 }
