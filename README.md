@@ -16,7 +16,7 @@ A simple website for viewing vans available for rental using react and react rou
 
 ## Demo
 
-<img src='demo.gif' alt='demo' />
+<img src='demo.gif' alt='demo' >
 
 ## Technologies 💻
 
