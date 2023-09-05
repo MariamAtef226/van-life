@@ -10,7 +10,7 @@ export default function Home() {
             <div className="text">
                 Rent the perfect van to make your perfect road trip.
             </div>
-            <Link to='/vans'><button className="btn">Find your van</button></Link>
+            <Link to='/van-life/vans'><button className="btn">Find your van</button></Link>
         </div>
     )
 }
