@@ -1,19 +1,16 @@
 import { getVanDetails } from "../config";
-import { useLoaderData, useParams, Link, useLocation } from "react-router-dom";
+import { useLoaderData, useParams, Link, useLocation, defer, Await } from "react-router-dom";
+import { Suspense } from 'react'
 
 export function loader({ params }) {
-    async function loadVanDetails(id) {
-        let van = getVanDetails(id);
-        return van;
-    }
-    return loadVanDetails(params.id);
+    return defer({ data: getVanDetails(params.id) });
 }
 
 export default function VansDetails() {
 
-    try {
-        let van = useLoaderData();
-        const params = useParams(); // catching the id from the URL
+    let van = useLoaderData();
+
+    function rendering(van) {
         let locationState = useLocation().state;
 
         var bgcolor =
@@ -55,12 +52,15 @@ export default function VansDetails() {
 
             </div>
         )
-
-
     }
-    catch (err) {
-        return err;
-    }
+
+    return(
+        <Suspense fallback={<h1>Loading Van Details...</h1>}>
+            <Await resolve={van.data}>
+                {rendering}
+            </Await>
+        </Suspense>
+    )
 
 
 
